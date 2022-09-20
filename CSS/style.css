@@ -114,12 +114,16 @@ body{
 }
 
 .btnJ{
+    font-weight: bold;
+    font-size: .8rem;
     background-color: #ffc208;
     border: #ffc208;
     border-radius: .5rem;
 }
 
 .btnR{
+    font-weight: bold;
+    font-size: .8rem;
     color: white;
     background-color: #1ba3bb;
     border: #1ba3bb;
@@ -127,6 +131,8 @@ body{
 }
 
 .btnN{
+    font-weight: bold;
+    font-size: .8rem;
     color: white;
     background-color: #72757a;
     border: #72757a;
@@ -134,6 +140,8 @@ body{
 }
 
 .btnS{
+    font-weight: bold;
+    font-size: .8rem;
     color: white;
     background-color: #a14e56;
     border: #a14e56;
