@@ -1,8 +1,6 @@
 body{
     margin: 0;
-    min-height: 100vh;
     display: grid;
-    grid-template-rows: auto auto auto;
     grid-template-areas:"header"
                         "main"
                         "footer";
@@ -12,7 +10,7 @@ body{
 
 .header{
     grid-area: header;
-    background-color: #34393f;
+    height: fit-content;
 }
 
 .ordenoTi{
@@ -36,7 +34,7 @@ body{
 }
 
 .ticketsColor{
-    color: #468a65!important
+    color: #8ac93f!important
 }
 
 .active{
@@ -48,17 +46,35 @@ body{
 
 .main{
     grid-area: main;
+    width: 100%;
+    height: fit-content;
 }
 
 .principal{
     width: 100%;
-    height: 40%;
+    height: 50rem;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     background-image: url(../img/ba1o.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.main__div{
+    width: 30rem;
+    margin-right: 4rem;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+.main__div h1{
+    text-align: end;
+}
+
+.fondoBotones{
+    display: flex;
+    justify-content: end;  
 }
 
 .colorBtn{
@@ -73,20 +89,6 @@ body{
     border-color: #dc3545;
     color: white;
     border-radius: 0.25rem;
-/*     font-size: .875rem;
-    padding: .275rem .55rem;  */
-}
-
-.main__div{
-    width: 30rem;
-    margin-right: 4rem;
-    margin-bottom: 4rem;
-    color: white;
-}
-
-.fondoBotones{
-    display: flex;
-    justify-content: end;  
 }
 
 /* ORADORES */
@@ -94,18 +96,21 @@ body{
 .sectionOradores{
     margin-top: 1rem;
     margin-bottom: 2rem;
-
 }
 
 .textoOradores{
     text-align: center;
     margin-top: 2rem;
-    line-height: .1; /* interlineado */  
+    line-height: .1; 
 }
 
 .oradores{
     display: flex;
     justify-content: center;
+}
+
+.card{
+    width: 18rem;
 }
 
 .bill{
@@ -148,30 +153,28 @@ body{
     border-radius: .5rem;
 }
 
-/* Imagenes */
+/* Imagenes  */
 
-.imagenes{
-    display: flex;
-    justify-content: center;
+.container{
+    max-width: 100%!important;
+}
+
+.honolulu{
+    padding: 0!important;
 }
 
 .honolulu img{
-    width: 49.2vw;
-    margin-right: .1rem;
-}
+    width: 100%;
+    border-right: solid 1px white;
+} 
 
 .ladoHonolulu{
-    width: 49.2vw;
-    padding: 1rem;
+    width: 100%;
     background-color: #353a40;
     color: white;
 }
 
-.sub{
-    border-bottom: 2px dotted;
-}
-
-/* Form */
+/* Form  */
 
 .centrarForm{
     display: flex;
@@ -187,7 +190,7 @@ body{
     margin-top: 2rem;
     margin-bottom: 0;
     text-align: center;
-    line-height: .1; /* interlineado */  
+    line-height: .1;
 }
 
 .margen{
@@ -203,15 +206,17 @@ body{
     width: 50rem;
     background-color: #96c93e!important;
     border-color: #96c93e!important;
-}
+} 
 
+.sub{
+    border-bottom: 2px dotted;
+} 
 
 /* FOOTER */
 
 .footer{
     grid-area: footer;
     background-color: #1f5271;
-    margin-top: 28rem;
 }
 
 .prueba{
@@ -225,61 +230,144 @@ body{
 }
 
 
-@media screen and (max-width: 800px) {
+/* Comprar Tickets */
 
-    .container-fluid{
-        justify-content: flex-start!important;
-    }
-
-    .navbar-toggler{
-        background-color: gray!important;
-    }
-
-    .honolulu img{
-        width: 49.2vw;
-        height: 48.2vw;
-        margin-right: .1rem;
-    }
+.mainTickets{
+    grid-area: main;
+    width: 100%;
+    height: fit-content; 
 }
 
+.categorias{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.ordenarCategorias{
+    margin: .5rem;
+    padding: .5rem;
+    margin-top: 2rem;
+}
+
+.desc{
+    font-weight: bold;
+}
+
+.borderColorE{
+    border: solid 1px #007bff;
+}
+
+.borderColorT{
+    border: solid 1px #17a2b8;
+}
+
+.borderColorJ{
+    border: solid 1px #ffc107;
+}
+
+.formularioTickets{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formTickets{
+    width: 44%;
+} 
+
+.nombreApellido{
+    display: flex;
+}
+
+.nombreApellido div {
+    width: 50%;
+}
+
+.categorias2{
+    display: flex;
+}
+
+.cant{
+    width: 50%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.cat{
+    width: 50%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.totalTickets{
+    text-align: start;
+    border-radius: .2rem;
+    border-color: #1f5271;
+    background-color: #cce5ff;
+}
+
+.totalTickets p {
+    margin: 1rem;
+    padding: .7rem;
+}
+
+.btnsCT{
+    width: 44%;
+    display: flex;
+}
+
+.btnTickets{
+    background-color: #97c93e;
+    width: 100%;
+    border-radius: .2rem;
+    border-color: #96c93e;
+}
 
 @media screen and (max-width: 500px) {
 
+    .main__div{
+        text-align: center;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+    
     .oradores{
         flex-direction: column;
         align-items: center;
-    }
+    } 
 
-    .card{
-        margin: 20px;
-    }
-
-    .imagenes{
-        flex-direction: column;
-        align-items: center;
-
-        border-top: solid .5px black;
-    }
-
-    .honolulu img{
-        width: 49.5rem;
-        height: 30rem;
-    }
-    
     .ladoHonolulu{
-        width: 100%;
-        height: 100%;
+        text-align: center;
     }
 
     .form{
-        width: 30rem;
+        width: 25rem;
     }
 
     .botonColor{
-        width: 30rem;
+        width: 25rem;
     }
 
-    .footer{
-        margin-top: 65rem;
+    /* Comprar Tickets */
+
+    .categorias{
+        flex-direction: column;
     }
-}
+    
+    .ordenarCategorias{
+        margin-top: 5rem;
+    }
+
+    .formularioTickets{
+        margin-top: 6rem;
+        margin-bottom: 8rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+} 
