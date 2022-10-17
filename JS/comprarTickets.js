@@ -62,7 +62,11 @@ function seleccionar() {
     const c = document.querySelector("#cantidad")
     document.getElementById(`resumen`).addEventListener(`click`, () => {
         if(c.value === "" || c.value === "0"){
-            alert ("Recuerde ingresar la cantidad de tickets")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Recuerde ingresar la cantidad de tickets',
+              })
         } else {
             const p = document.querySelector("#cat")
             const mensaje = document.querySelector("#pagar")
